@@ -2,11 +2,6 @@ Latest Version
 --------------
 ##### _June 3rd, 2016_ - [v1.0.0](https://github.com/mixpanel/mixpanel-unity/releases/tag/1.0.0)
 
-```
-dependencies {
-    compile "com.mixpanel.android:mixpanel-android:4.+"
-}
-```
 [See the changes](https://github.com/mixpanel/mixpanel-unity/releases/tag/1.0.0).
 
 Getting Started
