@@ -2,6 +2,9 @@ Latest Version
 --------------
 ##### _June 3rd, 2016_ - [v1.0.0](https://github.com/mixpanel/mixpanel-unity/releases/tag/1.0.0)
 
+```
+using mixpanel;
+```
 [See the changes](https://github.com/mixpanel/mixpanel-unity/releases/tag/1.0.0).
 
 Getting Started
@@ -42,3 +45,4 @@ build_all.py # on Windows
 The build script will create all the project files (make, xcode, visual studio), perform the builds and run the tests suites. The test suites are run on: OS X, Windows, iOS Simulator and Android Device (if one is attached).
 
 It will also export the unity package. Note that Unity must be closed while running build_all.py.
+
