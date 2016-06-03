@@ -24,4 +24,26 @@ We'd also love for you to come and work with us! Check out http://boards.greenho
 
 Changelog
 ---------
-See [wiki page](https://github.com/mixpanel/mixpanel-unity-private/wiki/Changelog).
+See [wiki page](https://github.com/mixpanel/mixpanel-unity/wiki/Changelog).
+
+
+Building the SDK
+----------------
+
+Add all dependencies of the Mixpanel SDK to your app using the following code in your terminal:
+
+```
+sh ./native/build/install_dependencies.sh
+```
+
+Then, run the following build script in your terminal: 
+
+```
+cd build
+python build_all.py # on OS X
+build_all.py # on Windows
+```
+
+The build script will create all the project files (make, xcode, visual studio), perform the builds and run the tests suites. The test suites are run on: OS X, Windows, iOS Simulator and Android Device (if one is attached).
+
+It will also export the unity package. Note that Unity must be closed while running build_all.py.
