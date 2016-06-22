@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Christine's Music Finder</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="assets/openicons/font/css/open-iconic-bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-thumbs.css?v=1.0.2" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/isotope.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <!-- start Mixpanel --> <script type="text/javascript"> var MIXPANEL_CUSTOM_LIB_URL = "https://mixpanel.com/libs/mixpanel.dev.min.js"; (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "); for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript"; a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]); mixpanel.init("CE PROJECT TOKEN", {ce: true}); </script><!-- end Mixpanel -->
+
+<script>
+    mixpanel.track("Viewed Page", {"page":"landing"});
+    function login() {
+        mixpanel.alias($("#signupEmail").val());
+        function explode(){
+            mixpanel.people.set({
+                "$name": $("#signupName").val(), 
+                "$email": $("#signupEmail").val(),
+                "Favorite Music": $("#music").val()
+            });
+        }
+        $("#suText").text("Welcome " + $("#signupName").val());
+        setTimeout(explode, 2000);
+    }
+</script>
+
+</head>
+
+<body class="gradient">
+
+    <!-- This section is for Splash Screen -->
+    <!--################ NAVIGATION START ################-->
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-purity" role="navigation">
+            <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#top">Home</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="modal" id="suText" href="#signUpModal" class="">Sign Up</a>
+                        </li>
+                        <li class="">
+                            <a href="#features">Play Music</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </div>
+    <!--################ NAVIGATION END ################-->
+    <!--################ WRAP START ################-->
+    <div id="wrap">
+        <!--################ HEADER START ################-->
+        <header id="top" data-stellar-background-ratio="0">
+            <div class="container home">
+                <div class="flexslider home">
+                        <img src="img/musical-dog.png" style="height: 400px;" alt="" class="project-img">
+                </div>
+            </div>
+            <div id="home-arrow" class="hidden-phone">
+                <a href="#features"><i class="icon-double-angle-down icon-3x" id="iconHome"></i></a>
+            </div>
+        </header>
+        <!--################ HEADER END ################-->
+        <!--################ MAIN CONTAINER START ################-->
+        <!--################ FEATURES SECTION START ################-->
+        <section id="features">
+            <div id="features-banner" data-stellar-background-ratio="0">
+                <h1>Play Music</h1>
+                <p class="sub-heading-support">Listen to the music you like!</p>
+            </div>
+        </section>
+        <!--################ FEATURES SECTION END ################-->
+        <!--################ PORTFOLIO SECTION START ################-->
+        <section class="portfolio home-portfolio gradient">
+            <div class="container" id="portfolio">
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <h1 class="big-heading">Play Songs</h1>
+                        <h4 class="sub-heading">play the music you like!!</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="portfolio-container">
+                    <div class="col-md-3 col-sm-3 project art">
+                        <img src="img/music.jpg" alt="" class="project-img">
+                        <span class="overlay"></span>
+                        <div class="cnt">
+                            <h5>Song A</h5>
+                            <a id="play1" href="img/music.jpg" class="fancybox-media btn btn-normal btn-purity" data-title-id="title-01">Play</a>
+                        </div>
+                        <div id="title-01" class="info hidden">
+                            <h5>Song A</h5>
+                            <div class="fancybody">Playing Song....</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 project art">
+                        <img src="img/music.jpg" alt="" class="project-img">
+                        <span class="overlay"></span>
+                        <div class="cnt">
+                            <h2>Song B</h2>
+                            <a id="play2" href="img/music.jpg" class="fancybox-media btn btn-normal btn-purity" data-title-id="title-02">Play</a>
+                        </div>
+                        <div id="title-02" class="info hidden">
+                            <h2>Song B</h2>
+                            <div class="fancybody">Playing Song....</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 project art">
+                        <img src="img/music.jpg" alt="" class="project-img">
+                        <span class="overlay"></span>
+                        <div class="cnt">
+                            <h2>Song C</h2>
+                            <a id="play3" href="img/music.jpg" class="fancybox-media btn btn-normal btn-purity" data-title-id="title-03">Play</a>
+                        </div>
+                        <div id="title-03" class="info hidden">
+                            <h2>Song C</h2>
+                            <div class="fancybody">Playing Song....</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 project art">
+                        <img src="img/music.jpg" alt="" class="project-img">
+                        <span class="overlay"></span>
+                        <div class="cnt">
+                            <h2>Song D</h2>
+                            <a id="play4" href="img/music.jpg" class="fancybox-media btn btn-normal btn-purity" data-title-id="title-04">Play</a>
+                        </div>
+                        <div id="title-04" class="info hidden">
+                            <h2>Song D</h2>
+                            <div class="fancybody">Playing Song....</div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </div>
+    <!--################ PUSH WILL KEEP THE FOOTER AT BOTTOM IF YOU WANT TO CREATE OTHER PAGES ################-->
+    <div id="push"></div>
+    <!--################ FOOTER START ################-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <!--<h2>about us...</h2>-->
+                    <h4>Christine's Demo Page</h4>
+                    
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+    <div id="back-to-top"><a class="back-to-top" href="#top"><i class="oi oi-arrow-circle-top"></i></a>
+    </div>
+    <!--################ FOOTER END ################-->
+    <!--################ JAVASCRIPTS ################-->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" charset="utf-8" src="assets/twitter/jquery.tweet.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.2"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.0"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/nicescroll.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/custom-home.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/retina.js"></script>
+    <!-- ajax contact form script -->
+    <script type="text/javascript" src="js/mail.js"></script>
+    <!-- Preloader script -->
+    <script>
+
+ 
+
+            $( "#play1" ).click(function() {
+               mixpanel.track("Song Played", {
+                "Title" : "A",
+                "duration in seconds" : 123,
+                "account type" : "Free"
+                })
+            });
+
+            $( "#play2" ).click(function() {
+               mixpanel.track("Song Played", {
+                "Title" : "B",
+                "duration in seconds" : 234,
+                "account type" : "Free"
+                })
+            });
+
+            $( "#play3" ).click(function() {
+               mixpanel.track("Song Played", {
+                "Title" : "C",
+                "duration in seconds" : 567,
+                "account type" : "Free"
+                })
+            });
+
+            $( "#play4" ).click(function() {
+               mixpanel.track("Song Played", {
+                "Title" : "D",
+                "duration in seconds" : 890,
+                "account type" : "Free"
+                })
+            });
+
+   
+    </script>
+    <!-- REGISTER MODAL -->
+    <!-- Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Create a new account...</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm" role="form">
+                        <div class="form-group">
+                            <label for="signupName">Name</label>
+                            <input type="text" class="form-control input-lg" id="signupName">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" class="form-control input-lg" id="signupEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupName">Favorite Music</label>
+                            <input type="text" class="form-control input-lg" id="music">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="login()" id="registerButton" data-dismiss="modal" class="btn btn-purity btn-lg">Create New Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--REGISTER MODAL END-->
+
+</body>
+
+</html>
